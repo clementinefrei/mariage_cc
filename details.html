@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariage de Marie et Jean - Détails</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <img src="/placeholder.svg?height=50&width=50" alt="Logo Marie et Jean" class="nav-logo">
+            <ul>
+                <li><a href="bienvenue.html" class="active">Bienvenue</a></li>
+                <li><a href="details.html">Détails</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Détails du mariage de Marie et Jean</h1>
+        
+        <div class="section">
+            <h2>Date et Lieu</h2>
+            <p>Samedi 15 Juin 2024</p>
+            <p>Château de l'Amour, 1 Rue des Fleurs, 75000 Paris</p>
+        </div>
+
+        <div class="section">
+            <h2>Programme</h2>
+            <ul>
+                <li>14h00 - Cérémonie</li>
+                <li>15h30 - Cocktail</li>
+                <li>18h00 - Dîner</li>
+                <li>21h00 - Soirée dansante</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>RSVP</h2>
+            <form>
+                <label for="name">Nom :</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email :</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="attendance">Présence :</label><br>
+                <select id="attendance" name="attendance" required>
+                    <option value="yes">Je serai présent(e)</option>
+                    <option value="no">Je ne pourrai pas être présent(e)</option>
+                </select><br>
+                <input type="submit" value="Envoyer" class="btn">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
