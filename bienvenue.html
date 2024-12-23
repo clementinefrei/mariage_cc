@@ -3,29 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mariage de Charlotte & Clément - Accueil</title>
+    <title>Mariage de Charlotte & Clément - Bienvenue</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="nav">
-        
-        <div class="nav-content">
-            <div class="logo-container">
-                <img src="../mariage_cc/logo.png" alt="Logo" class="nav-logo">
-            </div>
-            <ul>
-                <li><a href="index.html" class="active">BIENVENUE</a></li>
+        <div class="nav-container">
+            <img src="logo.png" alt="Logo" class="nav-logo" />
+            <ul class="nav-links">
+                <li><a href="bienvenue.html" class="active">BIENVENUE</a></li>
                 <li><a href="details.html">INFORMATIONS</a></li>
-                <li><a href="details.html">PRESENCE</a></li>
-                <li><a href="details.html">RESTRICTIONS ALIMENTAIRES</a></li>
-                <li><a href="details.html">LISTE DE MARIAGE</a></li>
+                <li><a href="presence.html">PRESENCE</a></li>
+                <li><a href="restrictions.html">RESTRICTIONS ALIMENTAIRES</a></li>
+                <li><a href="liste.html">LISTE DE MARIAGE</a></li>
             </ul>
         </div>
     </nav>
-    <div class="container home-container">
-        <h1>Bienvenue au mariage de Charlotte & Clément</h1>
-        <img src="../mariage_cc/logo.png" alt="Charlotte et Clément">
-        <p>Nous sommes ravis de vous inviter à célébrer notre amour et notre union. Rejoignez-nous pour cette journée spéciale remplie de joie, d'amour et de souvenirs inoubliables.</p>
+    <div class="container home-header">
+        <h1>Bienvenue au mariage de Charlotte et Clément</h1>
     </div>
+    <div class="container home-container">
+        <div class="left-content">
+            <img src="../mariage_cc/logo.png" alt="Logo Mariage">
+            <p>Nous sommes ravis de vous inviter à célébrer notre amour et notre union.</p>
+            <p>Rejoignez-nous le <strong>28 juin 2025</strong> pour une journée remplie de joie, d'amour et de souvenirs inoubliables.</p>
+        </div>
+        <div class="right-content">
+            <img src="../mariage_cc/photo-couple.jpeg" alt="Photo de Charlotte et Clément">
+        </div>
+    </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const navLinks = document.querySelectorAll('.nav a');
+    
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                navLinks.forEach(item => item.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    });
+    </script>
 </body>
 </html>

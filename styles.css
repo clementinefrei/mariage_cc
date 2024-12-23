@@ -1,3 +1,4 @@
+/* Reset CSS */
 body {
     font-family: 'Cambria', sans-serif;
     line-height: 1.6;
@@ -5,22 +6,18 @@ body {
     padding: 0;
     background-color: #f8f8f8;
     color: #333;
-    font-size: 16px;
-}
-
-.container {
-    max-width: 1200px;
-    width: 95%;
-    margin: 0 auto;
-    padding: 20px 0;
+    font-size: 18px;
     box-sizing: border-box;
 }
 
+/* Global Styles */
 h1, h2 {
     color: #4a4a4a;
+    margin-bottom: 20px;
 }
 
-h1 {
+p {
+    font-size: 18px;
     margin-bottom: 20px;
 }
 
@@ -31,165 +28,89 @@ img {
     margin-bottom: 20px;
 }
 
-p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.btn {
-    display: inline-block;
-    background-color: #d4bc8c;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #c0a978;
-}
-
-.section {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* Styles spécifiques à la page d'accueil */
-.home-container {
-    text-align: center;
-}
-
-/* Styles spécifiques au formulaire RSVP */
-form input, form select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-form input[type="submit"] {
-    width: auto;
-    cursor: pointer;
-}
-
-/* Styles pour la navigation */
+/* Styles de la navigation */
 .nav {
     background-color: #d4bc8c;
-    padding: 20px 2.5%;
-    margin-bottom: 20px;
+    padding: 15px 2.5%;
     width: 100%;
-    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.nav-content {
+.nav-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    box-sizing: border-box;
 }
 
+/* Logo tout à gauche */
 .nav-logo {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+/* Centrer la navigation */
+.nav-links {
+    list-style: none;
     display: flex;
-    flex-wrap: wrap;
+    padding: 0;
+    margin: 0 auto; /* Centre horizontalement */
 }
 
-.nav li {
-    margin: 5px 15px;
+.nav-links li {
+    margin: 0 15px;
 }
 
-.nav a {
+.nav-links a {
     color: white;
     text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    font-size: 20px;
+    padding: 8px 10px;
     transition: background-color 0.3s;
-    white-space: nowrap;
-    font-size: 18px;
+    border-radius: 5px;
 }
 
 .nav a:hover, .nav a.active {
-    background-color: transparent;
-    border-bottom: 2px solid white; 
+    border-bottom: 2px solid white;
     padding-bottom: 8px;
 }
 
-/* Media queries pour la responsivité */
-@media (max-width: 1200px) {
-    .container, .nav-content {
-        max-width: 95%;
-    }
+/* Containers */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
 }
 
+.home-header h1 {
+    text-align: center;
+    font-size: 28px;
+}
+
+/* Home Page Layout */
+.home-container {
+    display: flex;
+    gap: 20px;
+}
+
+.left-content, .right-content, .content {
+    flex: 1;
+    text-align: center;
+    justify-content: center; /* Centrer la carte horizontalement */
+    align-items: center; /* Centrer la carte verticalement */
+}
+
+/* Responsive Layout for smaller screens */
 @media (max-width: 768px) {
-    .nav-content {
+    .home-container {
         flex-direction: column;
-        align-items: center;
-    }
-
-    .nav ul {
-        margin-top: 10px;
-        justify-content: center;
-    }
-
-    .container {
-        padding: 10px;
-        width: 95%;
-    }
-
-    .nav {
-        padding: 15px 2%;
-    }
-
-    .nav a {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .btn {
-        display: block;
-        width: 100%;
-        text-align: center;
-        box-sizing: border-box;
-    }
-
-    .nav {
-        padding: 15px 1%;
-    }
-
-    .nav-content {
-        padding: 0;
     }
 
     .nav ul {
         flex-direction: column;
         align-items: center;
-    }
-
-    .nav li {
-        margin: 5px 0;
-    }
-
-    .container {
-        width: 98%;
     }
 }

@@ -3,58 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mariage de Marie et Jean - Détails</title>
+    <title>Mariage de Charlotte & Clément - Informations</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="nav">
-        <div class="nav-content">
-            <ul>
-                <img src="../mariage_cc/logo.png" alt="Logo" class="nav-logo">
-                <li></li>
-                <li><a href="bienvenue.html" class="active">Bienvenue</a></li>
-                <li><a href="details.html">Informations</a></li>
-                <li><a href="details.html">Présence</a></li>
-                <li><a href="details.html">Restrictions alimentaires</a></li>
-                <li><a href="details.html">Liste de mariage</a></li>
+        <div class="nav-container">
+            <img src="logo.png" alt="Logo" class="nav-logo" />
+            <ul class="nav-links">
+                <li><a href="bienvenue.html" class="active">BIENVENUE</a></li>
+                <li><a href="details.html">INFORMATIONS</a></li>
+                <li><a href="presence.html">PRESENCE</a></li>
+                <li><a href="restrictions.html">RESTRICTIONS ALIMENTAIRES</a></li>
+                <li><a href="liste.html">LISTE DE MARIAGE</a></li>
             </ul>
         </div>
-    </nav>      
-    <div class="container">
-        <h1>Détails du mariage de Marie et Jean</h1>
-        
-        <div class="section">
-            <h2>Date et Lieu</h2>
-            <p>Samedi 15 Juin 2024</p>
-            <p>Château de l'Amour, 1 Rue des Fleurs, 75000 Paris</p>
-        </div>
+    </nav>
 
-        <div class="section">
-            <h2>Programme</h2>
-            <ul>
-                <li>14h00 - Cérémonie</li>
-                <li>15h30 - Cocktail</li>
-                <li>18h00 - Dîner</li>
-                <li>21h00 - Soirée dansante</li>
-            </ul>
-        </div>
+    <div class="container home-header">
+        <h1>Informations</h1>
+        <div class="container home-container">
+            <div class="left-content" style="margin-left: 0px">
+                <div style="margin-top: 70px;">
+                Nous vous donnons rendez-vous le samedi <strong>28 juin 2025</strong> pour célébrer notre union :
+                </div>
+                <div style="text-align : left">
+                <br>
+                <ul>
+                    <li>À la <strong style="color: #745547;">Basilique Notre-Dame d'Arcachon</strong> (Chapelle des Marins), pour la cérémonie religieuse.</li>
+                    <br>
+                    <li>À la <strong style="color: #EF534F;">Ferme D'en Chon</strong> à Biscarrosse, pour la cérémonie laïque.</li>
+                </ul>
+                </div>
+            </div>
 
-        <div class="section">
-            <h2>RSVP</h2>
-            <form>
-                <label for="name">Nom :</label><br>
-                <input type="text" id="name" name="name" required><br>
-                <label for="email">Email :</label><br>
-                <input type="email" id="email" name="email" required><br>
-                <label for="attendance">Présence :</label><br>
-                <select id="attendance" name="attendance" required>
-                    <option value="yes">Je serai présent(e)</option>
-                    <option value="no">Je ne pourrai pas être présent(e)</option>
-                </select><br>
-                <input type="submit" value="Envoyer" class="btn">
-            </form>
+            <div class="right-content">
+                <iframe src="https://www.google.com/maps/d/embed?mid=12n86MvB82o6Nc25t4QE5SczrdcrKAEY&ehbc=2E312F&noprof=1" width="500" height="375" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
+    </div>
+
+    <div class="container home-header">
+        <h1>Programme</h1>
+        <div class="container home-container">
+            <div class="content">
+                <b>10h00</b>
+                <br>
+                <img src="logo-eglise.png" alt="Logo" class="nav-logo" /> - Cérémonie religieuse
+            </div>   
+        </div> 
     </div>
 </body>
 </html>
-
