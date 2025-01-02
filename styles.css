@@ -1,6 +1,6 @@
 /* Reset CSS */
 body {
-    font-family: 'Cambria', sans-serif;
+    font-family: 'Arapey';
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -8,6 +8,13 @@ body {
     color: #333;
     font-size: 18px;
     box-sizing: border-box;
+    padding-top: 120px; 
+    overflow-y: auto;  /* Assure que le défilement vertical est géré de manière contrôlée */
+    margin-right: 17px;
+}
+
+html {
+    overflow-y: scroll;  /* Force la barre de défilement à être toujours visible */
 }
 
 /* Global Styles */
@@ -30,25 +37,37 @@ img {
 
 /* Styles de la navigation */
 .nav {
-    background-color: #d4bc8c;
-    padding: 15px 2.5%;
+    background-color: #829db6;
     width: 100%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 0;
+    box-sizing: border-box;
+    width: 100%;
+    /* Ajoutez cette ligne pour forcer un fond qui couvre tout */
+    background: #829db6;
+    /* S'assurer que la navigation n'est pas affectée par la barre de défilement */
 }
+
 
 .nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centre la navigation */
 }
 
 /* Logo tout à gauche */
 .nav-logo {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    padding: 0; /* Réduit l'espacement autour du logo */
 }
 
 /* Centrer la navigation */
@@ -56,7 +75,7 @@ img {
     list-style: none;
     display: flex;
     padding: 0;
-    margin: 0 auto; /* Centre horizontalement */
+    margin: 0;
 }
 
 .nav-links li {
@@ -77,12 +96,44 @@ img {
     padding-bottom: 8px;
 }
 
+/* Centrage vertical et horizontal */
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Style du logo */
+.prog-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    padding: 5px;
+}
+
+.vague-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 5px;
+}
+
+/* Détails du programme */
+.prog-details {
+    font-size: 18px;
+    color: #4a4a4a;
+}
+
 /* Containers */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .home-header h1 {
@@ -94,13 +145,15 @@ img {
 .home-container {
     display: flex;
     gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .left-content, .right-content, .content {
     flex: 1;
     text-align: center;
-    justify-content: center; /* Centrer la carte horizontalement */
-    align-items: center; /* Centrer la carte verticalement */
+    justify-content: center;
+    align-items: center;
 }
 
 /* Responsive Layout for smaller screens */

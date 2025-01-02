@@ -9,7 +9,7 @@
 <body>
     <nav class="nav">
         <div class="nav-container">
-            <img src="logo.png" alt="Logo" class="nav-logo" />
+            <img src="logo-pinasse.png" alt="Logo" class="nav-logo" />
             <ul class="nav-links">
                 <li><a href="bienvenue.html" class="active">BIENVENUE</a></li>
                 <li><a href="details.html">INFORMATIONS</a></li>
@@ -29,20 +29,22 @@
             <p>Rejoignez-nous le <strong>28 juin 2025</strong> pour une journée remplie de joie, d'amour et de souvenirs inoubliables.</p>
         </div>
         <div class="right-content">
-            <img src="../mariage_cc/photo-couple.jpeg" alt="Photo de Charlotte et Clément">
+            <img src="../mariage_cc/Photo_CC.jpeg" alt="Photo de Charlotte et Clément">
         </div>
     </div>
     <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const navLinks = document.querySelectorAll('.nav a');
-    
-        navLinks.forEach(link => {
-            link.addEventListener('click', function () {
-                navLinks.forEach(item => item.classList.remove('active'));
-                this.classList.add('active');
+        document.addEventListener("DOMContentLoaded", () => {
+            const navLinks = document.querySelectorAll('.nav a');
+            const currentPage = window.location.pathname.split("/").pop();
+        
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
             });
         });
-    });
     </script>
 </body>
 </html>
