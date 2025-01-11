@@ -5,35 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mariage de Charlotte & Clément - Informations</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <script src="script.js" defer></script> <!-- Inclure le fichier JS -->
+
     <nav class="nav">
         <div class="nav-container">
             <img src="images/logo-pinasse.png" alt="Logo" class="nav-logo" />
             <ul class="nav-links">
                 <li><a href="index.html" class="active">BIENVENUE</a></li>
                 <li><a href="details.html">INFORMATIONS</a></li>
-                <li><a href="details.html">PRESENCE</a></li>
-                <li><a href="details.html">RESTRICTIONS ALIMENTAIRES</a></li>
-                <li><a href="details.html">LISTE DE MARIAGE</a></li>
+                <li><a href="presence.html">PRESENCE</a></li>
+                <li><a href="presence.html">LISTE DE MARIAGE</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="container home-header">
+    <nav class="sub-nav">
+        <div class="sub-nav-container">
+            <ul class="sub-nav-links">
+                <li><a href="#lieux">LIEUX</a></li>
+                <li><a href="#programme">PROGRAMME</a></li>
+                <li><a href="#logements">LOGEMENTS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+
+</head>
+<body>
+    <div class="anchor-offset" id="lieux-offset"></div>
+    <div id="lieux" class="container home-header">
         <h1>LIEUX</h1>
         <div class="container home-container">
             <div class="left-content">
                 <div style="margin-top: 70px;">
-                Nous vous donnons rendez-vous le samedi <strong>28 juin 2025</strong> pour célébrer notre union :
+                    Nous vous donnons rendez-vous le samedi <strong>28 juin 2025</strong> pour célébrer notre union :
                 </div>
                 <div style="text-align : left">
-                <br>
-                <ul>
-                    <li>À la <strong style="color: #745547;">Basilique Notre-Dame d'Arcachon</strong> (Chapelle des Marins), pour la cérémonie religieuse.</li>
                     <br>
-                    <li>À la <strong style="color: #EF534F;">Ferme D'en Chon</strong> à Biscarrosse, pour le reste des festivités.</li>
-                </ul>
+                    <ul>
+                        <li>À la <strong style="color: #745547;">Basilique Notre-Dame d'Arcachon</strong> (Chapelle des Marins), pour la cérémonie religieuse.</li>
+                        <br>
+                        <li>À la <strong style="color: #EF534F;">Ferme D'en Chon</strong> à Biscarrosse, pour le reste des festivités.</li>
+                    </ul>
                 </div>
             </div>
 
@@ -43,30 +57,39 @@
         </div>
     </div>
 
-    <div class="container home-header">
+    <div id="programme" class="container home-header">
         <h1>PROGRAMME</h1>
-            <div class="center-content">
-                <img src="images/logo-eglise.png" alt="Logo" class="prog-logo" />
-                <div class="prog-details">
-                    <b>15h30 - Basilique Notre Dame d'Arcachon</b>
-                    <br>
-                    Cérémonie religieuse
-                </div>
-                <img src="images/logo-vague.png" alt="Logo" class="vague-logo" />  
-                <img src="images/logo-cocktail.png" alt="Logo" class="prog-logo" />
-                <div class="prog-details">
-                    <b>18h00 - Ferme D'en Chon</b>
-                    <br>
-                    Cocktail / Dîner
-                </div>
-                <img src="images/logo-vague.png" alt="Logo" class="vague-logo" />
-                <img src="images/logo-brunch.png" alt="Logo" class="prog-logo" />
-                <div class="prog-details">
-                    <b>11h30 - Ferme D'en Chon</b>
-                    <br>
-                    Brunch
-                </div>
-            </div>   
+        <div class="center-content">
+            <img src="images/logo-eglise.png" alt="Logo" class="prog-logo" />
+            <div class="prog-details">
+                <b>15h30 - Basilique Notre Dame d'Arcachon</b>
+                <br>
+                Cérémonie religieuse
+            </div>
+            <img src="images/logo-vague.png" alt="Logo" class="vague-logo" />  
+            <img src="images/logo-cocktail.png" alt="Logo" class="prog-logo" />
+            <div class="prog-details">
+                <b>18h00 - Ferme D'en Chon</b>
+                <br>
+                Cocktail / Dîner
+            </div>
+            <img src="images/logo-vague.png" alt="Logo" class="vague-logo" />
+            <img src="images/logo-brunch.png" alt="Logo" class="prog-logo" />
+            <div class="prog-details">
+                <b>11h30 - Ferme D'en Chon</b>
+                <br>
+                Brunch
+            </div>
+        </div>   
+    </div>
+
+    <div id="logements" class="container home-header">
+        <h1>LOGEMENTS</h1>
+        <div class="center-content">
+            <p>Nous avons préparé une liste d'hébergements pour ceux qui souhaitent rester à proximité. Vous pouvez la consulter ci-dessous :</p>
+            <!-- Visualisation du PDF -->
+            <iframe src="logements.pdf" width="100%" height="600px" style="border: none;"></iframe>
+        </div>
     </div>
 </body>
 </html>
