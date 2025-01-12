@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariage de Charlotte & Clément - Informations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <img src="images/logo-pinasse.png" alt="Logo" class="nav-logo" />
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="bienvenue.html">BIENVENUE</a></li>
+                <li><a href="informations.html" class="active">INFORMATIONS</a></li>
+                <li><a href="presence.html">PRESENCE</a></li>
+                <li><a href="liste-mariage.html">LISTE DE MARIAGE</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="bienvenue.html">BIENVENUE</a></li>
+            <li><a href="informations.html" class="active">INFORMATIONS</a></li>
+            <li><a href="presence.html">PRESENCE</a></li>
+            <li><a href="liste-mariage.html">LISTE DE MARIAGE</a></li>
+        </ul>
+    </div>
+
+    <nav class="sub-nav">
+        <div class="sub-nav-container">
+            <ul class="sub-nav-links">
+                <li><a href="#lieux">LIEUX</a></li>
+                <li><a href="#programme">PROGRAMME</a></li>
+                <li><a href="#logements">LOGEMENTS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <div class="anchor-offset" id="lieux-offset"></div>
+    <div id="lieux" class="container home-header">
+        <h1>LIEUX</h1>
+        <div class="container home-container">
+            <div class="left-content">
+                <div class="date-info">
+                    Nous vous donnons rendez-vous le samedi <strong>28 juin 2025</strong> pour célébrer notre union :
+                </div>
+                <div class="location-info">
+                    <ul>
+                        <li>À la <strong class="basilique">Basilique Notre-Dame d'Arcachon</strong> (Chapelle des Marins), pour la cérémonie religieuse.</li>
+                        <li>À la <strong class="ferme">Ferme D'en Chon</strong> à Biscarrosse, pour le reste des festivités.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="right-content">
+                <iframe src="https://www.google.com/maps/d/embed?mid=12n86MvB82o6Nc25t4QE5SczrdcrKAEY&ehbc=2E312F&noprof=1" width="500" height="375" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div id="programme" class="container home-header">
+        <h1>PROGRAMME</h1>
+        <div class="center-content">
+            <div class="programme-item">
+                <img src="images/logo-eglise.png" alt="Logo Église" class="prog-logo" />
+                <div class="prog-details">
+                    <b>15h30 - Basilique Notre Dame d'Arcachon</b>
+                    <br>
+                    Cérémonie religieuse
+                </div>
+            </div>
+            <img src="images/logo-vague.png" alt="Logo Vague" class="vague-logo" />  
+            <div class="programme-item">
+                <img src="images/logo-cocktail.png" alt="Logo Cocktail" class="prog-logo" />
+                <div class="prog-details">
+                    <b>18h00 - Ferme D'en Chon</b>
+                    <br>
+                    Cocktail / Dîner
+                </div>
+            </div>
+            <img src="images/logo-vague.png" alt="Logo Vague" class="vague-logo" />
+            <div class="programme-item">
+                <img src="images/logo-brunch.png" alt="Logo Brunch" class="prog-logo" />
+                <div class="prog-details">
+                    <b>11h30 - Ferme D'en Chon</b>
+                    <br>
+                    Brunch
+                </div>
+            </div>
+        </div>   
+    </div>
+
+    <div id="logements" class="container home-header">
+        <h1>LOGEMENTS</h1>
+        <div class="center-content">
+            <p>Nous avons préparé une liste d'hébergements pour ceux qui souhaitent rester à proximité. Vous pouvez la consulter ci-dessous :</p>
+            <iframe src="logements.pdf" class="pdf-viewer"></iframe>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const body = document.body;
+
+            mobileNavToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('show');
+                body.classList.toggle('menu-open');
+                
+                // Change l'attribut aria-expanded pour l'accessibilité
+                const isExpanded = mobileMenu.classList.contains('show');
+                mobileNavToggle.setAttribute('aria-expanded', isExpanded);
+            });
+
+            // Ferme le menu si on clique en dehors
+            document.addEventListener('click', function(event) {
+                if (!mobileMenu.contains(event.target) && !mobileNavToggle.contains(event.target)) {
+                    mobileMenu.classList.remove('show');
+                    body.classList.remove('menu-open');
+                    mobileNavToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Gestion des liens du sous-menu
+            const subNavLinks = document.querySelectorAll('.sub-nav-links a');
+            subNavLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        const offsetTop = targetElement.offsetTop - 160; // Ajustez cette valeur selon vos besoins
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+
+
+    </script>
+</body>
+</html>
+

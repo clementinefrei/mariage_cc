@@ -1,6 +1,6 @@
 /* Reset CSS */
 body {
-    font-family: 'Arapey';
+    font-family: 'Arapey', serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -8,7 +8,7 @@ body {
     color: #333;
     font-size: 18px;
     box-sizing: border-box;
-    padding-top: 160px; 
+    padding-top: 150px; 
     overflow-y: auto;
     margin-right: 17px;
 }
@@ -35,7 +35,7 @@ img {
     margin-bottom: 20px;
 }
 
-/* Styles de la navigation principale */
+/* Navigation Styles */
 .nav {
     background-color: #829db6;
     width: 100%;
@@ -44,17 +44,17 @@ img {
     top: 0;
     left: 0;
     z-index: 1000;
-    padding: 10px 0;
+    padding: 5px 0;
     box-sizing: border-box;
 }
 
 .nav-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     max-width: 1200px;
-    
+    margin: 0 auto;
 }
 
 .nav-logo {
@@ -62,7 +62,6 @@ img {
     height: 80px;
     object-fit: contain;
     padding: 0;
-    margin-left: 100px;
 }
 
 .nav-links {
@@ -70,6 +69,8 @@ img {
     display: flex;
     padding: 0;
     margin: 0;
+    flex-grow: 1; /* Ajouté pour que les liens prennent l'espace disponible */
+    justify-content: center; /* Centrer les liens */
 }
 
 .nav-links li {
@@ -85,21 +86,21 @@ img {
     border-radius: 5px;
 }
 
-.nav a:hover, .nav a.active {
+.nav-links a:hover, .nav-links a.active {
     border-bottom: 2px solid white;
     padding-bottom: 8px;
 }
 
-/* Styles de la sous-navigation */
+/* Sub Navigation Styles */
 .sub-nav {
     background-color: white;
     width: 100%;
-    padding: 20px 0;  /* Augmentez la valeur de padding-top et padding-bottom pour élargir la hauteur */
+    padding: 20px 0;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     position: fixed;
-    top: 120px; /* Décale légèrement la sous-navigation sous la navigation principale */
+    top: 120px;
 }
 
 .sub-nav-container {
@@ -108,7 +109,6 @@ img {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-family: 'Arapey';
 }
 
 .sub-nav-links {
@@ -127,41 +127,15 @@ img {
     text-decoration: none;
     color: #4a4a4a;
     font-size: 18px;
-    font-family: 'Arapey';
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .sub-nav-links a:hover {
-    color: white;
+    color: #829db6;
 }
 
-/* Centrage vertical et horizontal */
-.center-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 20px 0;
-    padding-bottom: 50px;
-}
-
-/* Programme */
-.prog-logo, .vague-logo {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    padding: 5px;
-}
-
-/* Détails du programme */
-.prog-details {
-    font-size: 18px;
-    color: #4a4a4a;
-}
-
-/* Containers */
+/* Content Styles */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -175,7 +149,6 @@ img {
     font-size: 28px;
 }
 
-/* Home Page Layout */
 .home-container {
     display: flex;
     gap: 20px;
@@ -188,52 +161,253 @@ img {
     text-align: center;
 }
 
-/* Simple Navigation */
-.simple-nav {
-    background-color: white;
-    width: 100%;
-    position: fixed;  /* La position fixe fait en sorte que la navigation reste visible */
-    top: 60px;  /* Décalage par rapport à la première navigation */
-    left: 0;
-    z-index: 999;  /* Moins que la barre principale pour ne pas la couvrir */
-    padding: 10px 0;
-    box-sizing: border-box;
+.date-info {
+    margin-top: 70px;
 }
 
-/* Container et style de la simple-nav */
-.simple-nav-links {
-    list-style: none;
+.location-info {
+    text-align: left;
+}
+
+.location-info ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.location-info li {
+    margin-bottom: 15px;
+}
+
+.basilique {
+    color: #745547;
+}
+
+.ferme {
+    color: #EF534F;
+}
+
+/* Programme Styles */
+.center-content {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding: 0;
+    text-align: center;
+    margin: 20px 0;
+    padding-bottom: 50px;
+}
+
+.programme-item {
+    margin-bottom: 20px;
+}
+
+.prog-logo, .vague-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    padding: 5px;
+}
+
+.prog-details {
+    font-size: 18px;
+    color: #4a4a4a;
+}
+
+/* PDF Viewer */
+.pdf-viewer {
+    width: 100%;
+    height: 600px;
+    border: none;
+}
+
+/* Mobile Navigation Toggle */
+.mobile-nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.mobile-nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+/* Styles existants... */
+
+/* Mobile Menu Styles */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #829db6;
+    z-index: 1001;
+    transition: right 0.3s ease-in-out;
+    overflow-y: auto;
+}
+
+.mobile-menu.show {
+    right: 0;
+}
+
+.mobile-nav-links {
+    list-style: none;
+    padding: 60px 0 0 0;
     margin: 0;
 }
 
-.simple-nav-links li {
-    margin: 0 15px;
+.mobile-nav-links li {
+    margin: 0;
 }
 
-.simple-nav-links a {
-    color: #4a4a4a;
+.mobile-nav-links a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
     text-decoration: none;
-    font-size: 20px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.simple-nav-links a:hover {
-    background-color: #829db6;
+.mobile-nav-links a.active {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Responsive Layout for smaller screens */
+/* Responsive iframe container */
+.responsive-iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 150%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+.responsive-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Styles du conteneur de formulaire */
+.form-container {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.form-container iframe {
+    width: 100%;
+    height: 1280px;
+    border: none;
+}
+
+/* Ajustements pour le menu mobile */
 @media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1002;
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    body {
+        padding-top: 100px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-logo {
+        margin-left: 20px;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .responsive-iframe-container {
+        padding-top: 200%; /* Increase height for mobile */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .sub-nav {
+        position: static;
+        padding: 10px 0;
+    }
+
+    .sub-nav-links {
+        flex-direction: row; /* Organiser en une seule ligne */
+        justify-content: center; /* Centrer les liens */
+        align-items: center;
+        margin-top: 20px;
+        flex-wrap: nowrap; /* Empêche le retour à la ligne */
+        gap: 40px; /* Ajoute de l'espace entre les éléments */
+    }
+
+    .sub-nav-links a {
+        flex: 1; /* Permet aux liens de s'ajuster pour occuper l'espace */
+        text-align: center; /* Centre le texte des liens */
+        white-space: nowrap; /* Empêche le texte de se couper */
+    }
+
     .home-container {
         flex-direction: column;
     }
 
-    .nav ul {
-        flex-direction: column;
-        align-items: center;
+    .left-content, .right-content {
+        width: 100%;
+    }
+
+    iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .form-container {
+        max-width: 100%;
+    }
+
+    .form-container iframe {
+        max-height: 100%; /* Hauteur de l'écran moins la hauteur du header */
     }
 }
+
