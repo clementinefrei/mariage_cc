@@ -501,7 +501,7 @@ img {
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 375px) {
     body {
         padding-top: 70px;
     }
@@ -543,4 +543,3 @@ img {
         padding-top: 100%; /* Further adjust for very small screens */
     }
 }
-
