@@ -272,7 +272,7 @@ img {
 }
 
 #lieux .right-content {
-    flex: 1; /* Réduit l'espace de la carte */
+    flex: 2; /* Réduit l'espace de la carte */
 }
 
 /* Media query pour les écrans plus petits */
@@ -458,6 +458,17 @@ img {
 
     .left-content, .right-content {
         width: 100%;
+        font-size: 14px;
+    }
+
+    .left-content span {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    .left-content p {
+        width: 100%;
+        font-size: 13px;
     }
 
     .container {
@@ -484,11 +495,19 @@ img {
     }
 
     .unique-content {
-        padding-left: 20px;
+        padding-left: 0px;
     }
 
     .unique-content p {
-        font-size: 14px;
+        font-size: 13px;
+    }
+
+    .center-content p {
+        font-size: 13px;
+    }
+
+    .unique-content a {
+        font-size: 12px;
     }
 
     .form-container {
