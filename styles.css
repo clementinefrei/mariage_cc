@@ -203,6 +203,12 @@ img {
     padding-top: 20px;
 }
 
+.center-content-list {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
 .unique-content {
     display: flex;
     align-items: left;
